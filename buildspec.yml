@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws --version
+      - $(aws ecr get-login --no-include-email --region ap-south-1)
+      - REPO_URI=590183758261.dkr.ecr.ap-south-1.amazonaws.com/akash-cloud-app
+  build:
+    commands:
+      - echo Building the Docker image...
+      - docker build -t $REPO_URI:latest .
+  post_build:
+    commands:
+      - echo Pushing Docker image to ECR...
+      - docker push $REPO_URI:latest
+artifacts:
+  files:
+    - '**/*'
+
