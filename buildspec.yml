@@ -5,17 +5,17 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws --version
-      - $(aws ecr get-login --no-include-email --region ap-south-1)
+      - $(aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 590183758261.dkr.ecr.ap-south-1.amazonaws.com)
       - REPO_URI=590183758261.dkr.ecr.ap-south-1.amazonaws.com/akash-cloud-app
   build:
     commands:
-      - echo Building the Docker image...
+      - echo Building Docker image...
       - docker build -t $REPO_URI:latest .
   post_build:
     commands:
-      - echo Pushing Docker image to ECR...
+      - echo Pushing Docker image...
       - docker push $REPO_URI:latest
+      - echo Writing image definitions...
+      - printf '[{"name":"akash-container","imageUri":"%s"}]' $REPO_URI:latest > imagedefinitions.json
 artifacts:
-  files:
-    - '**/*'
-
+  files: imagedefinitions.json
