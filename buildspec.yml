@@ -17,5 +17,7 @@ phases:
       - docker push $REPO_URI:latest
       - echo Writing image definitions...
       - printf '[{"name":"akash-container","imageUri":"%s"}]' $REPO_URI:latest > imagedefinitions.json
+
 artifacts:
-  files: imagedefinitions.json
+  files:
+    - imagedefinitions.json
