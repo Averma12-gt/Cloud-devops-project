@@ -1,0 +1,21 @@
+{
+  "family": "akash-task",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "containerDefinitions": [
+    {
+      "name": "akash-container",
+      "image": "590183758261.dkr.ecr.ap-south-1.amazonaws.com/akash-cloud-app:latest",
+      "portMappings": [
+        {
+          "containerPort": 5000,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true
+    }
+  ],
+  "executionRoleArn": "arn:aws:iam::590183758261:role/ecsTaskExecutionRole"
+}
