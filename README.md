@@ -63,7 +63,7 @@ cloud-devops-project/
 ├── task-def.json                   # ECS Task Definition JSON
 └── README.md                       # Project documentation
 
-text```
+```
 
 
 ## ⚙️ How It Works
@@ -114,4 +114,6 @@ Git LFS vs .gitignore for large file handling
 Add domain name + SSL using Route53 + ACM
 CI/CD with GitHub Actions (alternate option)
 Monitoring with CloudWatch & container insights
+
+---
 
