@@ -101,20 +101,25 @@ Make sure your GitHub repo is connected to CodePipeline
 Add buildspec.yml in the root
 Ensure task-def.json is kept updated if image tag changes
 
+```
 🐳 Docker Commands (Local Testing)
+```
 docker build -t akash-cloud-app .
 docker run -p 5000:5000 akash-cloud-app
 
+```
 🧠 Lessons Learned
+```
 Importance of using correct platform linux/amd64 for ECS
 Using SHA256 vs tag (latest) in ECS
 Troubleshooting ECS logs and container pull errors
 Git LFS vs .gitignore for large file handling
+```
 
 🏁 Future Improvements
+```
 Add domain name + SSL using Route53 + ACM
 CI/CD with GitHub Actions (alternate option)
 Monitoring with CloudWatch & container insights
-
 ```
 
