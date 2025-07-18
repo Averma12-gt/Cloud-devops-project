@@ -45,18 +45,21 @@ Example: http://13.233.178.166 (Note: This IP changes if the task stops or resta
 
 ## 📁 Project Structure
 cloud-devops-project/
-├── app/
-│ ├── app.py
-│ ├── requirements.txt
-│ └── Dockerfile
-├── terraform/
-│ ├── main.tf
-│ ├── ecr.tf
-│ ├── ecs.tf
-│ └── variables.tf
-├── buildspec.yml
-├── task-def.json
-└── README.md
+├── app/                  # Flask app source code and Dockerfile
+│   ├── app.py            # Main Flask application
+│   ├── requirements.txt  # Python dependencies
+│   └── Dockerfile        # Dockerfile for containerizing the app
+│
+├── terraform/            # Infrastructure as Code (Terraform)
+│   ├── main.tf           # Terraform backend & provider configuration
+│   ├── ecr.tf            # AWS ECR resource definitions
+│   ├── ecs.tf            # AWS ECS task and service definitions
+│   └── variables.tf      # Input variables for Terraform
+│
+├── buildspec.yml         # AWS CodeBuild build specification
+├── task-def.json         # ECS Task Definition JSON
+└── README.md             # Project documentation
+
 
 ## ⚙️ How It Works
 
