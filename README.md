@@ -86,6 +86,7 @@ cloud-devops-project/
 
 ## 🚀 How to Deploy
 
+```text
 ### 1. Clone & Configure
 git clone https://github.com/Averma12-gt/Cloud-devops-project.git
 cd Cloud-devops-project/terraform
@@ -115,5 +116,5 @@ Add domain name + SSL using Route53 + ACM
 CI/CD with GitHub Actions (alternate option)
 Monitoring with CloudWatch & container insights
 
----
+```
 
