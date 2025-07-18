@@ -63,6 +63,7 @@ cloud-devops-project/
 ├── task-def.json                   # ECS Task Definition JSON
 └── README.md                       # Project documentation
 
+text```
 
 
 ## ⚙️ How It Works
