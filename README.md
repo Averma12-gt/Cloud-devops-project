@@ -27,6 +27,27 @@ http://<Public-IP>:80
 Example: http://13.233.178.166 (Note: This IP changes if the task stops or restarts)
 
 ---
+ # 📦 Run Locally
+You can run this project locally using Docker.
+
+🔧 Prerequisites
+Docker installed
+
+# Clone the repository
+git clone https://github.com/Averma12-gt/Cloud-devops-project.git
+cd Cloud-devops-project/app
+
+# Build the Docker image
+docker build -t akash-cloud-app .
+
+# Run the container
+docker run -p 5050:5000 akash-cloud-app
+
+#  Access App
+Open your browser at
+👉 http://localhost:5050
+
+---
 
 ## 📦 Tech Stack
 
