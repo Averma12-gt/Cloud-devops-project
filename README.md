@@ -34,8 +34,9 @@ You can run this project locally using Docker.
 Docker installed
 
 # Clone the repository
-git clone https://github.com/Averma12-gt/Cloud-devops-project.git
-cd Cloud-devops-project/app
+1. git clone https://github.com/Averma12-gt/Cloud-devops-project.git
+
+2. cd Cloud-devops-project/app
 
 # Build the Docker image
 docker build -t akash-cloud-app .
