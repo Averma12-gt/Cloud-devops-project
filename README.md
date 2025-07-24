@@ -47,6 +47,8 @@ docker run -p 5050:5000 akash-cloud-app
 Open your browser at
 👉 http://localhost:5050
 
+<img width="1438" height="860" alt="image" src="https://github.com/user-attachments/assets/fd1eb94f-28e4-469c-bda0-5051d3f2bebb" />
+
 ---
 
 ## 📦 Tech Stack
